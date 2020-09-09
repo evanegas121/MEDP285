@@ -5,10 +5,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
-picture{
-position:relative;
-float: center;	
-}
+
 
 a {
 color: #2e1c6d;
