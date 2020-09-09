@@ -5,6 +5,10 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
+picture{
+position:relative;
+float: center;	
+}
 
 a {
 color: #2e1c6d;
@@ -43,16 +47,4 @@ text-align: center;
 width: 600px;
 border-style: solid;
 border-radius: 5px; 
-}
-center {
-float: center;
-margin: auto;
-float: center;
-background-color: grey;
-opacity: .8;
-border-style:solid;
-border: 7px;
-text-align: center;
-position:relative;
-width: 500px;
 }
