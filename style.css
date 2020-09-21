@@ -1,11 +1,15 @@
 body{
 float:center;
-background-image: url("images/sky.mp4");
+background-color:#FAEEAA;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
+font-family:Bradley Hand, cursive;
 }
-
+picture{
+position:relative;
+float: center;	
+}
 
 a {
 color: #2e1c6d;
@@ -21,27 +25,32 @@ text-align: center;
 
  header {
 margin: auto;
+margin-left: 40px;
+float: left;
 height:120px;
 border-style:solid;
 text-align:center;
 margin-bottom:10px;
-background-color: grey;
-opacity: .8;
+background-color:grey;
+background: rgba(197,211,250, .7);
 padding-bottom: 10px;
-width: 40%;
+width: 25%;
 height: 50%;
-position:relative;
 
 }
 
 div{
-float: center;
+float: right;
 margin: auto;
+padding-right: 60px;
+margin-right: 70px;
 /*background-color: #aec4e4;*/
-background-color: grey;
-opacity: .8;
+background-color:grey;
+background: rgba(197,211,250, .7);
 text-align: center;
-width: 600px;
+width: 60%;
 border-style: solid;
 border-radius: 5px; 
 }
+
+
