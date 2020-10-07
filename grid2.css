@@ -1,0 +1,145 @@
+
+body {
+float:center;
+background-color: black;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family:Bradley Hand, cursive;
+
+
+}
+header {
+width:1000px;
+margin: auto;
+height:120px;
+border-style:solid;
+text-align:center;
+margin-bottom:10px;
+background-color: grey;
+opacity: .8;
+padding-bottom: 10px;
+width: 40%;
+height: 50%;
+position:relative;
+
+}
+
+
+a {
+color: white;
+}
+#layout {
+      display: grid;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: 200px 500px 200px;
+    }
+
+.box {
+  background: #444;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+}
+.game-board {
+    padding-top: 100px;
+    display: grid;
+    grid-template-rows: 188px 188px 188px;
+    grid-template-columns: 333px 333px 333px;
+    padding-left: 200px;
+}
+.box1{
+   background-image: url("images/images/paint_01.jpg");
+}
+.box1:hover{
+   background-image: url("images/images/pink_01.jpg");
+}
+
+.box2{
+ background-image: url("images/images/paint_02.jpg");
+ }
+.box2:hover{
+   background-image: url("images/images/pink_02.jpg");
+}
+
+.box3{
+ background-image: url("images/images/paint_03.jpg");
+ }
+.box3:hover{
+   background-image: url("images/images/pink_03.jpg");
+}
+
+.box4{
+background-image: url("images/images/paint_04.jpg");
+ }
+.box4:hover{
+   background-image: url("images/images/pink_04.jpg");
+}
+
+.box5{
+background-image: url("images/images/paint_05.jpg");
+}.box5:hover{
+   background-image: url("images/images/pink_05.jpg");
+}
+
+.box6{
+background-image: url("images/images/paint_06.jpg");
+ }
+.box6:hover{
+   background-image: url("images/images/pink_06.jpg");
+}
+
+ .box7{
+background-image: url("images/images/paint_07.jpg");
+ }
+.box7:hover{
+   background-image: url("images/images/pink_07.jpg");
+}
+
+ .box8{
+background-image: url("images/images/paint_08.jpg");
+ }
+.box8:hover{
+   background-image: url("images/images/pink_08.jpg");
+}
+
+ .box9{
+background-image: url("images/images/paint_09.jpg");
+ }
+ .box9:hover{
+   background-image: url("images/images/pink_09.jpg");
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  grid-row: 3;
+  grid-column: 1/4;
+  border: 1px solid black;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+   main {
+      display: flex; /* introduces flexbox layout */
+      flex-direction: row;
+    }
+    .column {
+      flex: 1; /*spreads divs across page evenly and all equal heights by default */
+      padding: 10px;
+      height: 300px;
+    }
+    @media (max-width: 600px) {
+      main {
+        flex-direction: column;
+      }
+ 
+
