@@ -1,0 +1,304 @@
+
+	@import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Special+Elite&display=swap');
+
+
+
+	* {
+			box-sizing: border-box;
+	}
+	body { 
+		font-family: 'Aldrich', sans-serif;
+    font-family: 'Special Elite', cursive;
+		background-image: url("images/Crown_NancyLiang.gif");
+		overflow: hidden; }
+	/* Text Animations */
+	/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+	@keyframes topFadeOut {
+			0% {
+			position: absolute;
+			bottom: -10%;
+			opacity: 0;
+		}
+		
+		75% {
+			position: absolute;
+			top: 25%;
+			opacity: 1;
+		}
+		100% { opacity: 0; }
+	}
+	@keyframes bottomFadeOut {
+		0% {
+			position: absolute;
+			bottom: -10%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			bottom: 25%;
+			opacity: 1;
+		}
+		100% { opacity: 0; }
+	}
+	@keyframes topFadeOutVertical {
+		0% {
+			position: absolute;
+			top: -10%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			top: 45%;
+			opacity: 1;
+		}
+		100% { opacity: 0; }
+	}
+	@keyframes rightFadeInOut{
+		0% {
+			position: absolute;
+			right: -20%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			right: 10%;
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			right: 90%
+		}
+	}
+	@keyframes fadeInOut{
+		0% {
+			opacity: 0;
+		}
+		45% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@keyframes leftFadeInOut{
+	
+		75% {
+			position: absolute;
+			left: 20%;
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			left: 40%
+		}
+	}
+	@keyframes bottomFadeOut2 {
+		0% {
+			position: absolute;
+			bottom: -10%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			bottom: 45%;
+			opacity: 1;
+		}
+		100% { 
+			opacity: 0; 
+			bottom: 45%;
+		}
+	}
+	@keyframes leftFadeInOut2{
+		0% {
+			position: absolute;
+			left: -10%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			left: 15%;
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			left: 15%
+		}
+	}
+	@keyframes rightFadeInOut2{
+		0% {
+			position: absolute;
+			right: -10%;
+			opacity: 0;
+		}
+		75% {
+			position: absolute;
+			right: 50%;
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			right: 50%
+		}
+	}
+	footer{
+	position: fixed;
+   left:0;
+   bottom: 0;
+   width: 100%;
+clear: both;
+  margin: 0;
+  padding: .07em;
+  color: black;
+  text-align: center;
+  background-color: grey;
+  border-top: 1px solid gray;
+		
+	}
+
+/* rem is root em */
+.first-text {
+
+  font-size: 4em;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+	color: white;
+	opacity: 0;
+	animation-name: topFadeOut;
+	
+	animation-duration: 7s;
+
+	/**animation-iteration-count: infinite;**/
+}
+
+.second-text {
+  font-size: 3em;
+  position: absolute;
+  top: 10%;
+ color: white;
+	opacity: 0;
+	animation-name: rightFadeInOut;
+	animation-delay: 7s;
+	animation-duration: 7s;
+	/**animation-iteration-count: infinite;**/
+}
+
+.third-text {
+  transform: rotate(-90deg);/*read vertically*/
+  font-size: 2em;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  color: white;
+	/*white-space: nowrap;no line break*/
+	opacity: 0;
+	animation-name: topFadeOutVertical;
+	animation-delay: 14s;
+	animation-duration: 8s;
+	/**animation-iteration-count: infinite;**/
+}
+.fourth-text {
+  font-size: 5em;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+ color: white;
+	opacity: 0;
+	animation-name: fadeInOut;
+	animation-delay: 20s;
+	animation-duration: 7s;
+	/**animation-iteration-count: infinite;**/
+}
+
+.fifth-text {
+  font-size: 6em;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+ color: white;
+	opacity: 0;
+	animation-name: bottomFadeOut;
+	animation-delay: 27s;
+	animation-duration: 9s;
+	/**animation-iteration-count: infinite;**/
+}
+.sixth-text {
+transform: rotate(-10deg);
+  font-size: 5em;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  bottom: 10%;
+ color: white;
+  
+	opacity: 0;
+	animation-name: fadeInOut;
+	animation-delay: 36s;
+	animation-duration: 9s;
+	/**animation-iteration-count: infinite;**/
+}
+.seventh-text {
+transform: rotate(-40deg);
+  font-size: 4em;
+  position: absolute;
+  top: 40%;
+  bottom: 10%;
+  
+  color: white;
+	opacity: 0;
+	animation-name: leftFadeInOut;
+	animation-delay: 45s;
+	animation-duration: 9s;
+	/**animation-iteration-count: infinite;**/
+}
+.eigth-text {
+  font-size: 2em;
+  position: absolute;
+  
+  right: 54%;
+  color: white;
+	opacity: 0;
+	animation-name: bottomFadeOut2;
+	animation-delay: 54s;
+	animation-duration: 9s;
+	/**animation-iteration-count: infinite;**/
+}
+.ninth-text {
+  font-size: 2em;
+  position: absolute;
+  top: 40%;
+  
+  color: white;
+	opacity: 0;
+	animation-name: leftFadeInOut2;
+	animation-delay: 63s;
+	animation-duration: 11s;
+	/**animation-iteration-count: infinite;**/
+}
+.tenth-text {
+
+  font-size: 3.3em;
+  position: absolute;
+  top: 60%;
+  
+  color: white;
+	opacity: 0;
+	animation-name: rightFadeInOut2;
+	animation-delay: 74s;
+	animation-duration: 15s;
+	/**animation-iteration-count: infinite;**/
+}
+
