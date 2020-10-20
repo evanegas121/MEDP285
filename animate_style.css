@@ -178,8 +178,7 @@ clear: both;
 	color: white;
 	opacity: 0;
 	animation-name: topFadeOut;
-	
-	animation-duration: 7s;
+	animation-duration: 9s;
 
 	/**animation-iteration-count: infinite;**/
 }
@@ -191,8 +190,8 @@ clear: both;
  color: white;
 	opacity: 0;
 	animation-name: rightFadeInOut;
-	animation-delay: 7s;
-	animation-duration: 7s;
+	animation-delay: 9s;
+	animation-duration: 10s;
 	/**animation-iteration-count: infinite;**/
 }
 
@@ -206,8 +205,8 @@ clear: both;
 	/*white-space: nowrap;no line break*/
 	opacity: 0;
 	animation-name: topFadeOutVertical;
-	animation-delay: 14s;
-	animation-duration: 8s;
+	animation-delay: 19s;
+	animation-duration: 11s;
 	/**animation-iteration-count: infinite;**/
 }
 .fourth-text {
@@ -218,8 +217,8 @@ clear: both;
  color: white;
 	opacity: 0;
 	animation-name: fadeInOut;
-	animation-delay: 20s;
-	animation-duration: 7s;
+	animation-delay: 29s;
+	animation-duration: 8s;
 	/**animation-iteration-count: infinite;**/
 }
 
@@ -231,7 +230,7 @@ clear: both;
  color: white;
 	opacity: 0;
 	animation-name: bottomFadeOut;
-	animation-delay: 27s;
+	animation-delay: 36s;
 	animation-duration: 9s;
 	/**animation-iteration-count: infinite;**/
 }
@@ -246,8 +245,8 @@ transform: rotate(-10deg);
   
 	opacity: 0;
 	animation-name: fadeInOut;
-	animation-delay: 36s;
-	animation-duration: 9s;
+	animation-delay: 45s;
+	animation-duration: 10s;
 	/**animation-iteration-count: infinite;**/
 }
 .seventh-text {
@@ -260,8 +259,8 @@ transform: rotate(-40deg);
   color: white;
 	opacity: 0;
 	animation-name: leftFadeInOut;
-	animation-delay: 45s;
-	animation-duration: 9s;
+	animation-delay: 55s;
+	animation-duration: 8s;
 	/**animation-iteration-count: infinite;**/
 }
 .eigth-text {
@@ -272,8 +271,8 @@ transform: rotate(-40deg);
   color: white;
 	opacity: 0;
 	animation-name: bottomFadeOut2;
-	animation-delay: 54s;
-	animation-duration: 9s;
+	animation-delay: 63s;
+	animation-duration: 17s;
 	/**animation-iteration-count: infinite;**/
 }
 .ninth-text {
@@ -284,8 +283,8 @@ transform: rotate(-40deg);
   color: white;
 	opacity: 0;
 	animation-name: leftFadeInOut2;
-	animation-delay: 63s;
-	animation-duration: 11s;
+	animation-delay: 80s;
+	animation-duration: 15s;
 	/**animation-iteration-count: infinite;**/
 }
 .tenth-text {
@@ -297,7 +296,7 @@ transform: rotate(-40deg);
   color: white;
 	opacity: 0;
 	animation-name: rightFadeInOut2;
-	animation-delay: 74s;
+	animation-delay: 95s;
 	animation-duration: 15s;
 	/**animation-iteration-count: infinite;**/
 }
