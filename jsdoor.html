@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8" />
+    <title>What's in the Closet?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Javascript for MEDP285 class" />
+    <meta name="author" content="Elizabeth Vanegas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/faviconapple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+         <style>
+            @import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Special+Elite&display=swap');
+             body {
+                 background-color:  white;
+                 font-family: 'Aldrich', sans-serif;
+                 font-family: 'Special Elite', cursive;
+                 color: black;
+             }
+             .boxFixed {
+                text-align: center;
+                margin: auto;
+                float: left;
+                border: 2px solid #999;
+                background: rgba(197,211,250, .7);
+                width: 100px;
+                position: fixed;
+                bottom: 30px;
+                right: 0;
+                }
+         </style>
+    </head>
+    <body>
+    <script>
+        function play(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+   </script>
+       <center> <div class="monster">
+            <div id="monstertxt">
+            <h1>
+              What's that sound coming from the closet!
+            </h1>
+            <p>Click the door</p>
+        </div>
+            <div id="image_closet">
+              
+            <img src="images/doorclosed.png" value="PLAY"  onclick="play()">
+            <audio id="audio" src="videos/open_door.mp3" ></audio>
+            
+            </div>
+            <button id="button" >
+              Click to see what's in the closet!
+            </button>
+            <audio>
+                <source src="videos/clothes.mp3"></source>
+            </audio>
+        </div>
+            <div class="boxFixed">
+        <p style="color:white"><a href="index.html"> Home</a></p>
+    </div></center>
+    </body>
+   <script>
+
+var closet = document.querySelector('#button');
+var num = 1;
+var monstertxt = document.querySelector('#monstertxt');
+var image = document.querySelector('#image_closet');
+closet.addEventListener('click', (event) =>{
+  if(num == 1) {
+    image.innerHTML =`<img src="images/dooropen_1.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/clothes.mp3"></audio>`;
+   //var audio = $("audio")[0];
+    //audio.play();} 
+    monstertxt.innerHTML = `<h1>I think I hear something! </h1>
+    <p>Click in the closet again</p>`; 
+  }
+  if(num == 2) {
+    image.innerHTML = `<img src="images/doorempty.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/lights.mp3"></audio>`;
+    monstertxt.innerHTML = `<h1>Let's see what's inside.</h1>`;
+}
+  if(num == 3) {
+    image.innerHTML = `<img src="images/door_doll.png">`;
+    monstertxt.innerHTML = `<h1> Thats an ugly toy</h1>`;    
+  }
+  if(num == 4) {
+    image.innerHTML = `<img src="images/doorcat.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/throw.mp3"></audio>`;
+    monstertxt.innerHTML = `<h1>That's not it.</h1><h> Keep Clicking! </h>`; 
+  }
+  if(num == 5) {
+    image.innerHTML = `<img src="images/doorclown.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/laugh.mp3"></audio>`;
+    monstertxt.innerHTML = `<h1> I thought I lost that!</h1>`;
+  }
+  if(num == 6) {
+    image.innerHTML = `<img src="images/dooropen_1.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/clothes.mp3" ></audio>`;
+    monstertxt.innerHTML = `<h1>I wonder what it could be.</h1><h> Keep Clicking! </h>`; 
+  }
+  if(num == 7) {
+    image.innerHTML = `<img src="images/doorspider.png"value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/Chain01.mp3"></audio>`;
+    monstertxt.innerHTML = `<h1>Oh! It's just Wilbur the spider.</h1>`; 
+  }
+   if(num == 8) {
+    image.innerHTML = `<img src="images/doorclosed.png" value="PLAY"  onclick="play()">
+    <audio id="audio" src="videos/close_door.mp3"></audio>`;
+    monstertxt.innerHTML = `<h1>Goodbye Wilbur!</h1>`; 
+  }
+  num++; 
+})
+  </script>
+
+</html>
