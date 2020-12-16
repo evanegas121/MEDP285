@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Library Map</title>
+<link rel="stylesheet" href="style___.css">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap" rel="stylesheet">
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Special+Elite&display=swap');
+	body { margin: 0; padding: 0; padding-bottom: 20%; 
+    /*background-image: url('images/coffee.jpg');*/
+    font-family: 'Aldrich', sans-serif;
+    font-family: 'Special Elite', cursive;
+    background-image: url(covers/page.jpg);
+    }
+    nav{
+        margin-bottom: 10px;
+    }
+	#map { 
+        height: 70%;
+        width: 80%;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+
+        bottom: 40px;
+        border: 6px solid #3A647F;
+        
+
+    }
+    .boxCenter {
+      
+      padding:20px 20px 20px 20px;
+      border: 2px solid #999;
+      background-color: #3A647F   ;
+      width: 350px;
+      height: 100px;
+      margin-top: 10px;
+      margin:auto;
+      margin-bottom: 40%;
+      top: 20%;
+      font: 35px ;
+      color: white;
+      bottom:200px
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+    
+</style>
+</head>
+<body>
+<style>
+    .mapboxgl-popup {
+        max-width: 60%;
+        font: 12px/20px 'Courier New', Courier, Helvetica, Monospace;
+    }
+</style>
+<ul><li><a href="bookshelf.html">Bookshelf</a></li></ul><br>
+<div class="boxCenter">
+     <center> <h1>
+        NY Book Stores
+      </h1>
+      <p style="font-size:10px">
+        Cool independent bookstores to check out
+      </p> </center>
+
+    </div>
+<div id="map"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWhyMTIzNCIsImEiOiJja2VoNGNmMjMwN2cxMnhtcDhmczhkejk1In0.rV_j8ObNnxnglm1YuwdNtw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [ -73.95094249830805,40.71398631967874],
+        zoom: 10.75
+    });
+
+    map.on('load', function() {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Bluestockings Bookstore, Cafe & Activist Center</strong><p><a href="https://boogiedowngrind.com" target="_blank" title="Opens in a new window">Check it out</a> Volunteer-run bookshop/cafe with titles, readings & workshops devoted to feminism & social activism.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.98557643877577, 40.72383431614157]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Community Bookstore</strong><p><a href="https://www.communitybookstore.net" target="_blank" title="Opens in a new window">Check it out </a> Community Bookstore is one of Brooklyn’s oldest independent bookstores. Opened in 1971, the store is a fixture on 7th Avenue, where people can stop in to browse through its cozy aisles — and likely run into the store’s cat. The store prides itself on its sense of community, often donating to local schools and helping to pay for holiday lights each year. Books can be shipped almost anywhere in the world at a minimal cost, and they can order almost every in-print book.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.97642768429056, 40.6733231803446]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Book Revue</strong><p><a href="https://www.bookrevue.com" target="_blank" title="Opens in a new window">Check it out! </a> ook Revue is well-known and beloved to the Huntington community, and wider. At 17,500 square feet it is one of the largest independent bookstores in the country. The owners work hard to create a space perfect for book lovers to browse, read and discuss books, and it shows in the store’s charming layout as well as the crowds it attracts. A cultural and social center for the community, the store provides workshops, book signings and children’s programs.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.42656711571644,40.87224002894441]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Greenlight Bookstore (Fulton Street)</strong><p><a href="http://greenlightbookstore.com/" target="_blank" title="Opens in a new window">Check it out! </a> The Greenlight Bookstore is located in Brooklyn’s scenic Fort Greene neighborhood. Since its opening in 2009, Greenlight has been a beloved part of the community, hosting scores of nationally bestselling.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.97466795847654, 40.69403411690531]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Dolphin Books</strong><p><a href="www.thedolphinbookshop.com" target="_blank" title="Opens in a new window">Check it out </a> Another waterfront independent community bookstore is Dolphin Books, located in Port Washington. The shop has distinguished itself as a neighborhood gem (it opened in 1946) which draws people all over, from Manhattan to the east end of Long Island. The Dolphin is a gathering place for readers and writers, and has hosted book readings and signings by authors and celebrities including Madeleine Albright, J.K. Rowling, Eric Carle and Tomie de Paola. They have recently moved to a new, more spacious location that allows for even more events like kids’ programs, book club meetings, fundraisers, poetry readings and concerts.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [ -73.69923635858844,40.83307484795374 ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Astoria Bookshop</strong><p> <a href="www.astoriabookshop.com" target="_blank" title="Opens in a new window">Check it out</a> Astoria Bookshop opened in August 2013, much to the delight of the surrounding community. The store has a book club, with books hand chosen by the owners. They promote local authors, with a link on their webpage devoted to them. Astoria Bookshop prides itself on carrying a lot of books by local Queens authors. They host a large range of events including weekly storytimes, author signings, readings and writing groups, poetry performances, writing workshops, and mindfulness meditation workshops.</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.92378930806416,40.76423830545235]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Molasses Books</strong><p> <a href="https://www.facebook.com/MolassesBooks/" target="_blank" title="Opens in a new window"><em>Check it out! </em></a> Used bookstore & cafe where patrons can barter volumes for coffee, beer or more books. </p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [ -73.92375183818612,40.70070058559196]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong> Quimbys Bookstore NYC</strong><p> <a href="quimbysnyc.com" target="_blank" title="Opens in a new window"><em>Check it out! </em></a> This lovingly irreverent bookstore serves up “unusual publications, aberrant periodicals, saucy comic booklets and assorted fancies” and, lucky us, “someone will be [there] to fill mail orders and to provide curbside pick up.”</p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [ -73.95094249830805,40.71398631967874]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>unoppressive Non-Imperialist Bargain Books</strong><p><a href="http://unoppressivebooks.blogspot.com" target="_blank">check it out!</a> Bookshop known for a thoughtful selection of new discounted titles on art, music, philosophy & more.p>',
+                            'icon': 'library'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-74.00307763563679,40.730050479508385]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}-15',
+                'icon-allow-overlap': true
+            }
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
