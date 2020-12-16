@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Special+Elite&display=swap');
+
+
+
+body{
+font-family: 'Aldrich', sans-serif;
+font-family: 'Special Elite', cursive;
+font: 10px;
+background-image: url(covers/page.jpg);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+img {
+  width: 90%;
+}
+.boxFixed {
+margin: auto;
+float: left;
+border: 2px solid #999;
+background: rgba(130, 130, 130, .7);
+width: 100vw;
+grid-row: 1;
+grid-column: 1/2;
+text-align: center;
+
+}
+
+.cover {
+grid-area: left;
+border: 2px solid #999;
+background: rgba(242,220,177, .7);
+margin: auto;
+margin-left: 1.5vw;
+float: left;
+height:20vw;
+text-align:center;
+padding-bottom: 1vw;
+padding-top: 1vw;
+border-radius: 5px; 
+width: 22%;
+height: 50%;
+}
+
+.summary {
+font-size:1.15vw;
+grid-area: right;
+border: 2px solid #999;
+background: rgba(242,220,177, .7);
+margin: auto;
+margin-right: 24vw;
+float: right;
+padding-bottom: 1vw;
+padding-top: 1vw;
+padding-right: 5vw;
+padding-left: 5vw;
+border-radius: 5px; 
+width: 40%;
+height: 30vw;
+}
+
+.review {
+font-size:1vw;
+margin: auto;
+float: left;
+margin-left: 1.5vw;
+margin-top: 1vw;
+width: 65vw;
+line-height: 2;
+padding-right: 5vw;
+padding-left: 5vw;
+border: 2px solid #999;
+background: rgba(242,220,177, .7);
+padding-bottom: 1vw;
+padding-top: 1vw;
+border-radius: 5px; 
+height: 90%;
+
+
+}
